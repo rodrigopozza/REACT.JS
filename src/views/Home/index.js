@@ -10,7 +10,7 @@ export const Home = () => {
                     </div>
 
                 </div>
-                <div className="p-2">
+                <div className=" m-auto p-2">
                     <a href="/listar-cliente"
                         className="btn btn-outline-success btn-sm">
                         Cliente

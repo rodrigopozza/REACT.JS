@@ -25,7 +25,7 @@ export const Menu = (props) => {
                 
             >
                 <Container>
-                    <NavbarBrand href="/">
+                    <NavbarBrand  href="/">
                         TI Academy
                     </NavbarBrand>
                     <NavbarToggler onClick={toggle} />
@@ -35,7 +35,7 @@ export const Menu = (props) => {
                             navbar
                         >
                             <NavItem>
-                                <NavLink href="/">
+                                <NavLink  href="/">
                                    Home
                                 </NavLink>
                             </NavItem>
