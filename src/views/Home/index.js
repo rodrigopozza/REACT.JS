@@ -7,8 +7,9 @@ export const Home = () => {
                 <div className="d-flex">
                     <div className="m-auto p-2">
                         <h1>Home</h1>
-                    </div>
+                    
 
+                </div>
                 </div>
                 <div className=" m-auto p-2">
                     <a href="/listar-cliente"
@@ -18,7 +19,7 @@ export const Home = () => {
                     <a href="/listar-pedido"
                         className="btn btn-outline-success btn-sm">
                         Pedido
-                    </a>
+                    </a> 
                     <a href="/listar-servico"
                         className="btn btn-outline-success btn-sm">
                         Serviço

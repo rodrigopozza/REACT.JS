@@ -7,6 +7,7 @@ import { ListarCliente } from './views/Cliente/Listar';
 import { ListarServico } from './views/Servico/Listar';
 import { Menu } from './Components/Menu';
 import { Item } from './views/Servico/Item';
+import { Cadastrar } from './views/Servico/Cadastrar';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/listar-cliente" component={ListarCliente} />
           <Route path="/listar-servico" component={ListarServico} />
           <Route path="/listar-pedido/:id" component={Item} />
-        
+          <Route path="/cadastrarservico" component={Cadastrar} />
         </Switch>
 
       </Router>

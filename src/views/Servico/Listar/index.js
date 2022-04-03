@@ -13,11 +13,11 @@ export const ListarServico = () => {
 
     const [status, setStatus] = useState({
         type: "",
-        message:""
+        message: ""
     });
 
     const getServicos = async () => {
-        await axios.get(api+"/listaservicos")
+        await axios.get(api + "/listaservicos")
             .then((response) => {
                 console.log(response.data.servicos);
                 setData(response.data.servicos);
@@ -30,17 +30,23 @@ export const ListarServico = () => {
     }
     useEffect(() => {
         getServicos();
-    },[]);
+    }, []);
 
     return (
         <div>
             <Container>
                 <div className="d-flex">
-                    <h1>Visualizar informações do Serviço</h1>
+                    <div className="d-flex">
+                        <h1>Visualizar informações do Serviço</h1>
+                    </div>
+                    <div className=" m-auto p-2">
+                        <Link to="/cadastrarservico"
+                            className="btn btn-outline-primary btn-sm">Cadastrar</Link>
+                    </div>
+
+                    {status.type === 'error' ? <Alert color="danger">{status.message} </Alert> : ""}
+
                 </div>
-                    <div className="p-2"> 
-                        {status.type === 'error' ?  <Alert color="danger">{status.message} </Alert> :""}
-                     </div>   
                 <Table striped>
                     <thead>
                         <tr>
@@ -63,14 +69,15 @@ export const ListarServico = () => {
                                     {item.descricao}
                                 </td>
                                 <td className="text-center/">
-                                 <Link to = {"/listar-pedido/"+item.id}
-                                 className =" btn btn-outline-primary btn-sm">Consultar</Link>
+                                    <Link to={"/listar-pedido/" + item.id}
+                                        className=" btn btn-outline-primary btn-sm">Consultar</Link>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </Table>
-            </Container>
-        </div>
+
+            </Container >
+        </div >
     );
 };

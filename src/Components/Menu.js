@@ -24,7 +24,7 @@ export const Menu = (props) => {
                 expand="md"
                 
             >
-                <Container>
+                <Container className='d-flex'>
                     <NavbarBrand  href="/">
                         TI Academy
                     </NavbarBrand>
